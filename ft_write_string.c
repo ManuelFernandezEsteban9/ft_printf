@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_write_string.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: manuel <manuel@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/26 19:12:38 by manuel            #+#    #+#             */
+/*   Updated: 2024/12/26 19:17:24 by manuel           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int	ft_write_string(char *str)
@@ -5,7 +17,7 @@ int	ft_write_string(char *str)
 	int	i;
 
 	i = 0;
-	while (str && *str!= '\0')
+	while (str && *str != '\0')
 	{
 		i = i + ft_write_char(*str);
 		str++;

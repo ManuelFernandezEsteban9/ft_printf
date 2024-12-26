@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: manuel <manuel@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/26 19:11:55 by manuel            #+#    #+#             */
+/*   Updated: 2024/12/26 19:15:30 by manuel           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 static	int	ft_converter(char op, va_list args)
@@ -23,17 +35,16 @@ static	int	ft_converter(char op, va_list args)
 	return (0);
 }
 
-
 int	ft_printf(const char *format, ...)
 {
-	int	count;
+	int		count;
 	va_list	args;
 
 	va_start(args, format);
 	count = 0;
 	while (format && *format != '\0')
 	{
-		if (format != '%')
+		if (*format != '%')
 		{
 			count = count + ft_write_char(*format);
 			format++;

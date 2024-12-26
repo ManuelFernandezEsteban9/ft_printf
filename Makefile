@@ -8,15 +8,11 @@ CC = clang
 
 CFLAGS = -Wall -Wextra -Werror 
 
-%.o: %.c 
-	$(CC) $(CFLAGS) -c  $< -o $@
-
 CFILES = ft_printf.c ft_write_number.c ft_write_string.c ft_write_char.c \
-	ft_write_hex_low.c ft_write_hex_upp.c ft_write_pointer_hex.c 
+	ft_write_hex_low.c ft_write_hex_upp.c ft_write_pointer_hex.c \
+       ft_write_unsigned_number.c ft_write_hex.c	
 
-OFILES = $(CFILES: .c=.o)
-
-HFILES = ft_printf.h
+OFILES = $(CFILES:.c=.o)
 
 all: $(NAME)
 
