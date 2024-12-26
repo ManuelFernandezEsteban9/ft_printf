@@ -14,6 +14,6 @@ int	ft_write_char(char c);
 int	ft_write_hex_low(int number);
 int	ft_write_hex_upp(int number);
 int	ft_write_pointer_hex(void *p);
-int	ft_write_unsigned_number(unsigned int);
+int	ft_write_unsigned_number(unsigned int nbr);
 
 #endif
