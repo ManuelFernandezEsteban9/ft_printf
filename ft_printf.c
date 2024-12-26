@@ -6,7 +6,7 @@
 /*   By: manuel <manuel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 19:11:55 by manuel            #+#    #+#             */
-/*   Updated: 2024/12/26 19:15:30 by manuel           ###   ########.fr       */
+/*   Updated: 2024/12/26 19:20:42 by manuel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static	int	ft_converter(char op, va_list args)
 	if (op == 'i')
 		return (ft_write_number(va_arg(args, int)));
 	if (op == 'c')
-		return (ft_write_char(va_arg(args, char)));
+		return (ft_write_char((char)va_arg(args, int)));
 	if (op == 's')
 		return (ft_write_string(va_arg(args, char *)));
 	if (op == 'd')
